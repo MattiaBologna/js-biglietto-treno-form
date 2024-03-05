@@ -23,13 +23,20 @@ submitElement.addEventListener('click', function() {
     // Dichiarazione della variabile sconto
     let discount = 0; 
         //sconto minorenni
-    if (age < 18) {
+    // // if (age < 18) {
+    // //     discount = price * 0.2;
+    // //     console.log(discount);
+    // //     //sconto over 65
+    // // } else if (age >= 65) {
+    // //     discount = price * 0.4;
+    // //     console.log(discount);
+    // // }
+
+    // discount for select 
+    if (inputAgeElement.value === 'minor') {
         discount = price * 0.2;
-        console.log(discount);
-        //sconto over 65
-    } else if (age >= 65) {
+    } else if (inputAgeElement.value === 'senior') {
         discount = price * 0.4;
-        console.log(discount);
     }
 
     // Calcolare il prezzo finale del biglietto

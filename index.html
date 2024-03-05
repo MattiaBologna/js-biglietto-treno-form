@@ -11,8 +11,14 @@
     <h2>Calcola il prezzo del biglietto</h2>
 
     <section class="travel_infos">
+        <!-- <label for="age">Età:</label>
+        <input type="number" name="age" id="age" placeholder="Età"> -->
         <label for="age">Età:</label>
-        <input type="number" name="age" id="age" placeholder="Età">
+        <select name="age" id="age">
+            <option value="default"> tra 18 e 65 anni</option>
+            <option value="minor"> meno di 18 anni</option>
+            <option value="senior"> più di 65 anni</option>
+        </select>
         <label for="distance">Kilometri:</label>
         <input type="number" name="distance" id="distance" placeholder="Kilometri">
         <input type="submit" value="Calcola" id="submit">
