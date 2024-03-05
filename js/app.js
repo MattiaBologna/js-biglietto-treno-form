@@ -12,22 +12,22 @@ const submitElement = document.getElementById('submit') // Element | null
 submitElement.addEventListener('click', function() {
     //stampare in console i valori di age e distance 
         // Definizione delle variabili età e distanza 
-    const age = inputAgeElement.value //string 
-    const distance = inputDistanceElement.value //string 
-    console.log(parseInt(age), parseInt(distance));
+    const age = parseInt(inputAgeElement.value) //number | NaN 
+    const distance = parseInt(inputDistanceElement.value) //number | NaN 
+    console.log(age, distance);
 
     // 3. Calcolare il prezzo del biglietto 
-    const price = parseInt(distance) * 0.21 //number | NaN
+    const price = distance * 0.21 //number | NaN
     console.log('il prezzo è: ', price)
 
     // Dichiarazione della variabile sconto
     let discount = 0; 
         //sconto minorenni
-    if (parseInt(age) < 18) {
+    if (age < 18) {
         discount = price * 0.2;
         console.log(discount);
         //sconto over 65
-    } else if (parseInt(age) >= 65) {
+    } else if (age >= 65) {
         discount = price * 0.4;
         console.log(discount);
     }
