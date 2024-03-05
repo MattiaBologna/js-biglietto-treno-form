@@ -48,6 +48,21 @@ submitElement.addEventListener('click', function() {
     const finalPriceDisplay = document.getElementById('ticket_price') //Element | null
     finalPriceDisplay.innerHTML = finalPrice
 
+    // Stampare il fullprice 
+    const fullPriceDisplay = document.getElementById('fullprice'); //Element | null
+    fullPriceDisplay.innerHTML = price;
+
+    //Stampare lo sconto in percentuale 
+    const discountPercentageDisplay = document.getElementById('ticket_discount'); // Element | null
+    if (inputAgeElement.value === 'minor') {
+        discountPercentageDisplay.innerHTML = '20%'
+    } else if (inputAgeElement.value === 'senior') {
+        discountPercentageDisplay.innerHTML = '40%'
+    } else {
+        discountPercentageDisplay.innerHTML = '0%'
+    }
+
+
 })
 
 
