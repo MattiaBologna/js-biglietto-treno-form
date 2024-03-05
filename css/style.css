@@ -1,0 +1,43 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+/* LAYOUT */
+
+.travel_infos,
+.ticket_infos {
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.travel_infos h2,
+.ticket_infos h2 {
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: wheat;
+    border-radius: 50px; 
+    margin-left: 20px;
+    border: 1px solid black;
+}
+
+.button:hover {
+    background-color: hsl(39, 77%, 73%);
+}
+

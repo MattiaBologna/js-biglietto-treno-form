@@ -6,15 +6,23 @@ const inputAgeElement = document.getElementById('age'); //string
 const inputDistanceElement = document.getElementById('distance'); //string 
 
 
+// Prendere l'elemento nome dall'html 
+const inputNameElement = document.getElementById('name') //string
+
+// Validazione dei dati
+
+
 // Stampare in console il valore di age e distance al click di submit:
 const submitElement = document.getElementById('submit') // Element | null
 // Aggiungere un eventListener al submit
 submitElement.addEventListener('click', function() {
     //stampare in console i valori di age e distance 
-        // Definizione delle variabili età e distanza 
+        // Definizione delle variabili età e distanza  (e nome)
     const age = parseInt(inputAgeElement.value) //number | NaN 
     const distance = parseInt(inputDistanceElement.value) //number | NaN 
     console.log(age, distance);
+    const name = inputNameElement.value //string
+    
 
     // 3. Calcolare il prezzo del biglietto 
     const price = distance * 0.21 //number | NaN
@@ -44,6 +52,10 @@ submitElement.addEventListener('click', function() {
     const finalPrice = price - discount;  //number | NaN
     console.log(finalPrice)
 
+    //Stampare il nome del passeggero
+    const passengerNameDisplay = document.getElementById('passenger_name');
+    passengerNameDisplay.innerHTML = name
+
     // 4. Stampare il prezzo 
     const finalPriceDisplay = document.getElementById('ticket_price') //Element | null
     finalPriceDisplay.innerHTML = finalPrice
@@ -61,8 +73,6 @@ submitElement.addEventListener('click', function() {
     } else {
         discountPercentageDisplay.innerHTML = '0%'
     }
-
-
 })
 
 
